@@ -49,6 +49,8 @@ public class UserServlet extends HttpServlet {
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             //chua dung
+            //chua dung
+
             String id = req.getParameter("id");
             userDAO.removeUser(Integer.parseInt(id));
             List<UserEntity> listUser = userDAO.findAllUser();
