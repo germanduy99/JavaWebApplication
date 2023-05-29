@@ -13,16 +13,16 @@
 <%--        <jsp:param name="name" value="LeducDuy"/>--%>
 <%--    </jsp:include>--%>
 
-<%--    <%--%>
-<%--        session.setAttribute("sesion","session implicit object");--%>
-<%--        application.setAttribute("application","application implicit object");--%>
+    <%
+        session.setAttribute("sesion","session implicit object");
+        application.setAttribute("application","application implicit object");
 
-<%--        pageContext.setAttribute("pageScope","page scope object", PageContext.PAGE_SCOPE);--%>
-<%--        pageContext.setAttribute("sessionScope","session scope object", PageContext.SESSION_SCOPE);--%>
-<%--        pageContext.setAttribute("requestScope","request scope object", PageContext.REQUEST_SCOPE);--%>
-<%--        pageContext.setAttribute("applicationScope","application scope object",PageContext.APPLICATION_SCOPE);--%>
-<%--       //  request.getRequestDispatcher("demo?name=T2108e&age=20").forward(request,response);--%>
-<%--    %>--%>
+        pageContext.setAttribute("pageScope","page scope object", PageContext.PAGE_SCOPE);
+        pageContext.setAttribute("sessionScope","session scope object", PageContext.SESSION_SCOPE);
+        pageContext.setAttribute("requestScope","request scope object", PageContext.REQUEST_SCOPE);
+        pageContext.setAttribute("applicationScope","application scope object",PageContext.APPLICATION_SCOPE);
+       //  request.getRequestDispatcher("demo?name=T2108e&age=20").forward(request,response);
+    %>
 
 <%--    <jsp:useBean id="userBean" class="entity.UserEntity" scope="request"/>--%>
 <%--    <jsp:setProperty name="userBean" property="id" value="1"/>--%>
@@ -34,8 +34,12 @@
 <%--    <jsp:forward page="testInclude.jsp">--%>
 <%--        <jsp:param name="name" value="value from index"/>--%>
 <%--    </jsp:forward>--%>
-</h1>
 
+</h1>
+<h1>${"2"+2}</h1>
+<h1>${"Hello".concat("T2108E")}</h1>
+<h1>param value ${param.name}</h1>
+<h1>check param value ${empty param.name}</h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
 <br>
